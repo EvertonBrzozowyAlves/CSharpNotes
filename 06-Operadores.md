@@ -2,13 +2,13 @@
 
 ## Aritméticos
 
-|Operador    | Significado   |
-|:----:      |:----:         |
-| +          | Adição        |
-| -          | Adição        |
-| *          | Adição        |
-| /          | Adição        |
-| %          | Adição        |
+|Operador    | Significado      |
+|:----:      |:----:            |
+| +          | Adição           |
+| -          | Subtração        |
+| *          | Multiplicação    |
+| /          | Divisão          |
+| %          | Resto da divisão |
 
 Assim como na matemática, os operadores *, / e % tem precedência a + e -, sendo executados primeiro em uma expressão.  
 Quando temos dois operadores com precedência, a ordem e executar o cálculo da esquerda para direita.  
@@ -42,3 +42,44 @@ double x1 = (-b + Math.Sqrt(delta)) / (2.0 * a);
 double x2 = (-b - Math.Sqrt(delta)) / (2.0 * a);
 ```
 
+## Atribuição
+
+|Operador    | Exemplo       | Significado   |
+|:----:      |:----:         |:----:         |
+| =          | a = 10;       | a recebe 10   |
+| +=         | a += 2;       | a recebe a + 2|
+| -=         | a -= 2;       | a recebe a - 2|
+| *=         | a *= 2;       | a recebe a * 2|
+| /=         | a /= 2;       | a recebe a / 2|
+| %=         | a %= 3;       | a recebe a % 3|
+
+Os operadores de atribuição comulativa funcionam da seguinte forma:  
+É feita a operação do primeiro operador sobre o valor que já está associado a variável, e depois a variável recebe o valor do resultado da operação.  
+
+```csharp
+int a = 12;
+a *= 3; //a == 36
+```
+
+O operador **+=** também funciona com strings, para concatenação.
+```csharp
+int s = 'My';
+s += ' text'; // 'My text'
+```
+
+## Aritméticos / Atribuição
+
+|Operador    | Exemplo       | Significado   |
+|:----:      |:----:         |:----:         |
+| ++         | a++ ou ++a    | a recebe a + 1|
+| --         | a-- ou --a    | a recebe a - 1|
+
+A diferença entre a++ e ++a é que, quando usamos a++ e a vamos atribuir o valor a uma outra variável b, 
+primeiro é atribuído o valor de a para b e depois a é incrementada.  
+Quando usamos ++a, antes de b receber o valor de a, a é incrementada.  
+
+```csharp
+int a = 10;
+b = a++; //b == 10
+b = ++a; //b == 11
+```
